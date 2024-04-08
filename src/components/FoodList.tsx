@@ -1,6 +1,8 @@
 /** @format */
 
 import FoodItem from "./FoodItem";
+import styles from './foodlist.module.css';
+
 
 interface FoodListProps {
   foodData: [];
@@ -14,7 +16,7 @@ interface FoodProps {
 
 export default function FoodList({ foodData }: FoodListProps) {
   return (
-    <ul>
+    <ul className={styles.foodlist}>
       {foodData.map((food: FoodProps) => (
         <FoodItem key={food.id} food={food} />
       ))}

@@ -1,0 +1,33 @@
+.item{
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px #00000015;
+}
+
+.image{
+    width: 100%;
+    height: auto;
+}
+
+.content{
+    padding: 10px 10px 15px 10px;
+}
+
+.itemName{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.btn{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #8a2be2;
+    color: #f0f8ff;
+}
+
+.btn:hover{
+    background-color: #7521c3;
+}
