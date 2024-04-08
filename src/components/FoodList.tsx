@@ -1,11 +1,11 @@
 /** @format */
 
 import FoodItem from "./FoodItem";
-import styles from './foodlist.module.css';
-
+import styles from "./foodlist.module.css";
 
 interface FoodListProps {
   foodData: [];
+  setFoodId: Function;
 }
 
 interface FoodProps {
@@ -14,12 +14,15 @@ interface FoodProps {
   image?: string;
 }
 
-export default function FoodList({ foodData }: FoodListProps) {
+export default function FoodList({ foodData, setFoodId }: FoodListProps) {
   return (
-    <ul className={styles.foodlist}>
-      {foodData.map((food: FoodProps) => (
-        <FoodItem key={food.id} food={food} />
-      ))}
-    </ul>
+    <div className={styles.container}>
+      <h3 className={styles.heading}>Foods</h3>
+      <ul className={styles.foodlist}>
+        {foodData.map((food: FoodProps) => (
+          <FoodItem key={food.id} food={food} setFoodId={setFoodId} />
+        ))}
+      </ul>
+    </div>
   );
 }
