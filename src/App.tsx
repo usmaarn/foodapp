@@ -2,6 +2,7 @@ import { useState } from "react";
 import Search from "./components/Search";
 import FoodList from "./components/FoodList";
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <div className="">
+      <Navbar />
       <Search setFoodData={setFoodData} />
       <FoodList foodData={foodData} />
     </div>
